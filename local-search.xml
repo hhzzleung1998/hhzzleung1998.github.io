@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>JQ练习</title>
+    <link href="/2021/11/04/JQ%E7%BB%83%E4%B9%A0/"/>
+    <url>/2021/11/04/JQ%E7%BB%83%E4%B9%A0/</url>
+    
+    <content type="html"><![CDATA[<h2 id="JQ节点操作"><a href="#JQ节点操作" class="headerlink" title="JQ节点操作"></a>JQ节点操作</h2><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;    &lt;head&gt;        &lt;meta charset=&quot;utf-8&quot;&gt;        &lt;title&gt;&lt;/title&gt;        &lt;script src=&quot;js/jquery-1.12.4.js&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;        &lt;script type=&quot;text/javascript&quot;&gt;            $(function()&#123;                $(&quot;#btn&quot;).click(function()&#123;                    var $li = $(&quot;&lt;li id=&#39;city&#39;&gt;佛山&lt;/li&gt;&quot;)                    // $(&quot;ul&quot;).append($li)                    // $li.appendTo($(&quot;ul&quot;))                    // $(&quot;&lt;li id=&#39;city&#39;&gt;佛山&lt;/li&gt;&quot;).appendTo($(&quot;ul&quot;))                    // $(&quot;ul&quot;).append(&quot;&lt;li id=&#39;city&#39;&gt;佛山&lt;/li&gt;&quot;)                    // $(&quot;ul&quot;).prepend($li)                    $li.prependTo($(&quot;ul&quot;))                &#125;)            &#125;)        &lt;/script&gt;    &lt;/head&gt;    &lt;body&gt;        &lt;ul id=&quot;citys&quot; type=&quot;none&quot;&gt;            &lt;h3&gt;喜欢的城市&lt;/h3&gt;            &lt;li id=&quot;city&quot;&gt;广州&lt;/li&gt;            &lt;li id=&quot;city&quot;&gt;深圳&lt;/li&gt;        &lt;/ul&gt;        &lt;input type=&quot;button&quot; id=&quot;btn&quot; value=&quot;添加节点&quot; /&gt;    &lt;/body&gt;&lt;/html&gt;</code></pre><p>运行结果：</p><p><img src="image-20211104192512736.png" alt="image-20211104192512736"></p><p>小练习测试！！！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>JQuery</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>test</title>
     <link href="/2021/11/03/test/"/>
     <url>/2021/11/03/test/</url>
