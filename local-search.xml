@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>小球落地反弹算法问题</title>
+    <link href="/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/"/>
+    <url>/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一球从h米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第n次落地时，共经过多少米？第n次反弹多高？</p><h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><ul><li><p>首先，小球除了第一次落地外，之后的每次落地都会有一个轮回（先反弹后落地）的过程，所以可以在除第一次落地外，遍历每次轮回的行程，行程为其最高点的两倍，然后将所有的轮回相加，再加上第一次的落地距离，即为第n次落地经过的距离。</p></li><li><p>由于第n次反弹是在第n次落地之后的，所以第n次反弹的高度为第n次落地前的高度除以2。</p></li></ul><h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>    Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);<br>    System.out.print(<span class="hljs-string">&quot;输入球的起始高度：&quot;</span>);<br>    <span class="hljs-keyword">double</span> height = scan.nextDouble();<br>    System.out.print(<span class="hljs-string">&quot;输入n：&quot;</span>);<br>    <span class="hljs-keyword">int</span> n = scan.nextInt();<br>    CalcSumAndHeight(height,n);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span>  <span class="hljs-title">CalcSumAndHeight</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height,<span class="hljs-keyword">int</span> n)</span></span>&#123;<br>    <span class="hljs-comment">//第一次落地因为没有来回，不算在循环内，并将sum设置为第一次落地的距离，即height</span><br>    <span class="hljs-keyword">double</span> sum = height;<br>    <span class="hljs-comment">//每次反弹至落地的循环</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> m = <span class="hljs-number">2</span>;m &lt;= n;m++)&#123;<br>        height = height / <span class="hljs-number">2</span>;<br>        sum += height * <span class="hljs-number">2</span>;<br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;第&quot;</span> + n + <span class="hljs-string">&quot;次落地时，共经过&quot;</span> + sum + <span class="hljs-string">&quot;米&quot;</span>);<br>    <span class="hljs-comment">//第n次落地后再弹起才是第n次弹回，所以height / 2</span><br>    System.out.println(<span class="hljs-string">&quot;第&quot;</span> + n + <span class="hljs-string">&quot;次反弹&quot;</span> + height / <span class="hljs-number">2</span> + <span class="hljs-string">&quot;米&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="image-20211106002857911.png" alt="image-20211106002857911"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>JQ练习</title>
     <link href="/2021/11/04/JQ%E7%BB%83%E4%B9%A0/"/>
     <url>/2021/11/04/JQ%E7%BB%83%E4%B9%A0/</url>

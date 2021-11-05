@@ -16,22 +16,22 @@
   <meta name="description" content="">
   <meta name="author" content="hhzzleung">
   <meta name="keywords" content="">
-  <meta name="description" content="JQ节点操作1234567891011121314151617181920212223242526272829&lt;!DOCTYPE html&gt;&lt;html&gt;	&lt;head&gt;		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;		&lt;title&gt;&lt;&#x2F;title&gt;		&lt;script src&#x3D;&quot;js&#x2F;jque">
+  <meta name="description" content="题目一球从h米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第n次落地时，共经过多少米？第n次反弹多高？ 解析 首先，小球除了第一次落地外，之后的每次落地都会有一个轮回（先反弹后落地）的过程，所以可以在除第一次落地外，遍历每次轮回的行程，行程为其最高点的两倍，然后将所有的轮回相加，再加上第一次的落地距离，即为第n次落地经过的距离。  由于第n次反弹是在第n次落地之后的，所以第n次反弹的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JQ练习">
-<meta property="og:url" content="http://example.com/2021/11/04/JQ%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:title" content="小球落地反弹算法问题">
+<meta property="og:url" content="http://example.com/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="hhzzleung">
-<meta property="og:description" content="JQ节点操作1234567891011121314151617181920212223242526272829&lt;!DOCTYPE html&gt;&lt;html&gt;	&lt;head&gt;		&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;		&lt;title&gt;&lt;&#x2F;title&gt;		&lt;script src&#x3D;&quot;js&#x2F;jque">
+<meta property="og:description" content="题目一球从h米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第n次落地时，共经过多少米？第n次反弹多高？ 解析 首先，小球除了第一次落地外，之后的每次落地都会有一个轮回（先反弹后落地）的过程，所以可以在除第一次落地外，遍历每次轮回的行程，行程为其最高点的两倍，然后将所有的轮回相加，再加上第一次的落地距离，即为第n次落地经过的距离。  由于第n次反弹是在第n次落地之后的，所以第n次反弹的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2021/11/04/JQ%E7%BB%83%E4%B9%A0/image-20211104192512736.png">
-<meta property="article:published_time" content="2021-11-04T11:22:00.000Z">
-<meta property="article:modified_time" content="2021-11-04T11:30:01.727Z">
+<meta property="og:image" content="http://example.com/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/image-20211106002857911.png">
+<meta property="article:published_time" content="2021-11-05T16:06:03.000Z">
+<meta property="article:modified_time" content="2021-11-05T16:35:26.249Z">
 <meta property="article:author" content="hhzzleung">
-<meta property="article:tag" content="JQuery">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2021/11/04/JQ%E7%BB%83%E4%B9%A0/image-20211104192512736.png">
+<meta name="twitter:image" content="http://example.com/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/image-20211106002857911.png">
   
-  <title>JQ练习 - hhzzleung</title>
+  <title>小球落地反弹算法问题 - hhzzleung</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -177,7 +177,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="JQ练习">
+            <span class="h2" id="subtitle" title="小球落地反弹算法问题">
               
             </span>
 
@@ -187,8 +187,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-11-04 19:22" pubdate>
-        2021年11月4日 晚上
+      <time datetime="2021-11-06 00:06" pubdate>
+        2021年11月6日 凌晨
       </time>
     </span>
   
@@ -198,7 +198,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.1k 字
+      867 字
     </span>
   
 
@@ -236,14 +236,19 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">JQ练习</h1>
+            <h1 style="display: none">小球落地反弹算法问题</h1>
             
             <div class="markdown-body">
-              <h2 id="JQ节点操作"><a href="#JQ节点操作" class="headerlink" title="JQ节点操作"></a>JQ节点操作</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;js/jquery-1.12.4.js&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span><br><span class="javascript">			$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="javascript">				$(<span class="hljs-string">&quot;#btn&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="javascript">					<span class="hljs-keyword">var</span> $li = $(<span class="hljs-string">&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;</span>)</span><br><span class="javascript">					<span class="hljs-comment">// $(&quot;ul&quot;).append($li)</span></span><br><span class="javascript">					<span class="hljs-comment">// $li.appendTo($(&quot;ul&quot;))</span></span><br><span class="javascript">					<span class="hljs-comment">// $(&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;).appendTo($(&quot;ul&quot;))</span></span><br><span class="javascript">					<span class="hljs-comment">// $(&quot;ul&quot;).append(&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;)</span></span><br><span class="javascript">					<span class="hljs-comment">// $(&quot;ul&quot;).prepend($li)</span></span><br><span class="javascript">					$li.prependTo($(<span class="hljs-string">&quot;ul&quot;</span>))</span><br><span class="javascript">				&#125;)</span><br><span class="javascript">			&#125;)</span><br><span class="javascript">		</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;citys&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;none&quot;</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>喜欢的城市<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>广州<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>			<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>深圳<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>		<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>		<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;添加节点&quot;</span> /&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+              <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>一球从h米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第n次落地时，共经过多少米？第n次反弹多高？</p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><ul>
+<li><p>首先，小球除了第一次落地外，之后的每次落地都会有一个轮回（先反弹后落地）的过程，所以可以在除第一次落地外，遍历每次轮回的行程，行程为其最高点的两倍，然后将所有的轮回相加，再加上第一次的落地距离，即为第n次落地经过的距离。</p>
+</li>
+<li><p>由于第n次反弹是在第n次落地之后的，所以第n次反弹的高度为第n次落地前的高度除以2。</p>
+</li>
+</ul>
+<h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>    Scanner scan = <span class="hljs-keyword">new</span> Scanner(System.in);<br>    System.out.print(<span class="hljs-string">&quot;输入球的起始高度：&quot;</span>);<br>    <span class="hljs-keyword">double</span> height = scan.nextDouble();<br>    System.out.print(<span class="hljs-string">&quot;输入n：&quot;</span>);<br>    <span class="hljs-keyword">int</span> n = scan.nextInt();<br>    CalcSumAndHeight(height,n);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span>  <span class="hljs-title">CalcSumAndHeight</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height,<span class="hljs-keyword">int</span> n)</span></span>&#123;<br>    <span class="hljs-comment">//第一次落地因为没有来回，不算在循环内，并将sum设置为第一次落地的距离，即height</span><br>    <span class="hljs-keyword">double</span> sum = height;<br>    <span class="hljs-comment">//每次反弹至落地的循环</span><br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> m = <span class="hljs-number">2</span>;m &lt;= n;m++)&#123;<br>        height = height / <span class="hljs-number">2</span>;<br>        sum += height * <span class="hljs-number">2</span>;<br>    &#125;<br>    System.out.println(<span class="hljs-string">&quot;第&quot;</span> + n + <span class="hljs-string">&quot;次落地时，共经过&quot;</span> + sum + <span class="hljs-string">&quot;米&quot;</span>);<br>    <span class="hljs-comment">//第n次落地后再弹起才是第n次弹回，所以height / 2</span><br>    System.out.println(<span class="hljs-string">&quot;第&quot;</span> + n + <span class="hljs-string">&quot;次反弹&quot;</span> + height / <span class="hljs-number">2</span> + <span class="hljs-string">&quot;米&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>运行结果：</p>
-<p><img src="image-20211104192512736.png" srcset="/img/loading.gif" lazyload alt="image-20211104192512736"></p>
-<p>小练习测试！！！</p>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="image-20211106002857911.png" srcset="/img/loading.gif" lazyload alt="image-20211106002857911"></p>
 
             </div>
             <hr>
@@ -254,7 +259,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/JQuery/">JQuery</a>
+                      <a class="hover-with-bg" href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
                     
                   </div>
                 
@@ -271,18 +276,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">小球落地反弹算法问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/11/03/test/">
-                        <span class="hidden-mobile">test</span>
+                      <a href="/2021/11/04/JQ%E7%BB%83%E4%B9%A0/">
+                        <span class="hidden-mobile">JQ练习</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
