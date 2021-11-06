@@ -42,44 +42,6 @@
   
   
   <entry>
-    <title>JQ练习</title>
-    <link href="/2021/11/04/JQ%E7%BB%83%E4%B9%A0/"/>
-    <url>/2021/11/04/JQ%E7%BB%83%E4%B9%A0/</url>
-    
-    <content type="html"><![CDATA[<h2 id="JQ节点操作"><a href="#JQ节点操作" class="headerlink" title="JQ节点操作"></a>JQ节点操作</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;js/jquery-1.12.4.js&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span><br><span class="javascript">$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="javascript">$(<span class="hljs-string">&quot;#btn&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="javascript"><span class="hljs-keyword">var</span> $li = $(<span class="hljs-string">&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;</span>)</span><br><span class="javascript"><span class="hljs-comment">// $(&quot;ul&quot;).append($li)</span></span><br><span class="javascript"><span class="hljs-comment">// $li.appendTo($(&quot;ul&quot;))</span></span><br><span class="javascript"><span class="hljs-comment">// $(&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;).appendTo($(&quot;ul&quot;))</span></span><br><span class="javascript"><span class="hljs-comment">// $(&quot;ul&quot;).append(&quot;&lt;li id=&#x27;city&#x27;&gt;佛山&lt;/li&gt;&quot;)</span></span><br><span class="javascript"><span class="hljs-comment">// $(&quot;ul&quot;).prepend($li)</span></span><br><span class="javascript">$li.prependTo($(<span class="hljs-string">&quot;ul&quot;</span>))</span><br><span class="javascript">&#125;)</span><br><span class="javascript">&#125;)</span><br><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;citys&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;none&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>喜欢的城市<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>广州<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;city&quot;</span>&gt;</span>深圳<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;添加节点&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p>运行结果：</p><p><img src="image-20211104192512736.png" alt="image-20211104192512736"></p><p>小练习测试！！！</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>JQuery</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>test</title>
-    <link href="/2021/11/03/test/"/>
-    <url>/2021/11/03/test/</url>
-    
-    <content type="html"><![CDATA[<p>This is a picture test!!!</p><p><img src="time.jpg" alt="time"></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>test</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2021/10/23/hello-world/"/>
     <url>/2021/10/23/hello-world/</url>
