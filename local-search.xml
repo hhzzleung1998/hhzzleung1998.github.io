@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Bootstrap中&lt;script&gt;标签crossorgin属性</title>
+    <link href="/2021/11/06/Bootstrap%E4%B8%AD-script-%E6%A0%87%E7%AD%BEcrossorgin%E5%B1%9E%E6%80%A7/"/>
+    <url>/2021/11/06/Bootstrap%E4%B8%AD-script-%E6%A0%87%E7%AD%BEcrossorgin%E5%B1%9E%E6%80%A7/</url>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>把bootstrap项目从Hbuilder X拷贝到桌面，然后打开.html文件发现页面的样式显示不出来，而在Hbuilder X中能正常运行，桌面下打开如下图：</p><p><img src="image-20211106142827438.png" alt="image-20211106142827438"></p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p><img src="image-20211106143224669.png" alt="image-20211106143224669"></p><ul><li><p>因为.html文件中在<code>&lt;script&gt;</code>中加入了crossorigin属性，此属性用于跨域。页面在Hbuilder X中能正常运行，是因为Hbuilder X启动页面时会使用其内置服务器，所以不报错。</p></li><li><p>在桌面点击.html打开时，因为<code>&lt;script&gt;</code>中src属性引用的是当前目录下的js或css，不存在跨域，加了crossorigin属性反而会报错。</p></li></ul><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ul><li>服务器与服务器之前进行访问，存在跨域</li><li>本地间引用文件，不存在跨域</li></ul><h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/crossorigin">MDN文档</a></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Bootstrap</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>小球落地反弹算法问题</title>
     <link href="/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/"/>
     <url>/2021/11/06/%E5%B0%8F%E7%90%83%E8%90%BD%E5%9C%B0%E5%8F%8D%E5%BC%B9%E7%AE%97%E6%B3%95%E9%97%AE%E9%A2%98/</url>
